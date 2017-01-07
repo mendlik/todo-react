@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <title>Todo</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="//jspm.io/system@0.19.js"></script>
+  <script>
+    System.config({
+      transpiler: 'babel',
+      map: {
+        'react-dom': '//unpkg.com/react-dom@15.3.1/dist/react-dom.min.js',
+        'react': '//unpkg.com/react@15.3.1/dist/react.min.js',
+        'redux': '//unpkg.com/redux@3.6.0/dist/redux.min.js',
+        'react-redux': '//unpkg.com/react-redux@5.0.1/dist/react-redux.min.js'
+      }
+    });
+    System
+      .import('./script.js')
+      .catch(err => console.error('Global error:', err));
+  </script>
+</body>
+</html>
